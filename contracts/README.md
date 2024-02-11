@@ -24,3 +24,20 @@ npm run coverage
 ## License
 
 [Apache-2.0](LICENSE)
+
+
+
+
+# Details
+
+GraphQL API Berkeley:
+```
+https://proxy.berkeley.minaexplorer.com/graphql
+```
+
+
+
+
+# Transacrions
+
+ https://minascan.io/berkeley/tx/5JvBQ7tvngQ6879DKGogEKp6TBz2pA74WgNYa5WkGysghD1dgW9M?type=zk-tx

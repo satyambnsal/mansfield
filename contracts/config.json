@@ -1,4 +1,13 @@
 {
   "version": 1,
-  "deployAliases": {}
+  "deployAliases": {
+    "mansfield": {
+      "url": "https://proxy.berkeley.minaexplorer.com/graphql",
+      "keyPath": "keys/mansfield.json",
+      "feepayerKeyPath": "/Users/satyam/.cache/zkapp-cli/keys/minaauroaccount1.json",
+      "feepayerAlias": "minaauroaccount1",
+      "fee": "0.1",
+      "smartContract": "Add"
+    }
+  }
 }

@@ -1,8 +1,8 @@
 {
   "name": "mansfield",
   "version": "0.1.0",
-  "description": "",
-  "author": "",
+  "description": "A private token transfer app",
+  "author": "Satyam Bansal",
   "license": "Apache-2.0",
   "keywords": [
     "mina-zkapp",
@@ -37,5 +37,8 @@
   },
   "peerDependencies": {
     "o1js": "0.15.*"
+  },
+  "dependencies": {
+    "zkapp-cli": "^0.16.0"
   }
 }
