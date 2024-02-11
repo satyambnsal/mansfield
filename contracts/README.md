@@ -35,9 +35,19 @@ GraphQL API Berkeley:
 https://proxy.berkeley.minaexplorer.com/graphql
 ```
 
+My Public key:
+B62qqhL8xfHBpCUTk1Lco2Sq8HitFsDDNJraQG9qCtWwyvxcPADn4EV
+B62qqhL8xfHBpCUTk1Lco2Sq8HitFsDDNJraQG9qCtWwyvxcPADn4EV
+
 
 
 
 # Transacrions
 
  https://minascan.io/berkeley/tx/5JvBQ7tvngQ6879DKGogEKp6TBz2pA74WgNYa5WkGysghD1dgW9M?type=zk-tx
+
+
+
+## Issues
+
+Error: getAccount: Could not find account for public key B62qqhL8xfHBpCUTk1Lco2Sq8HitFsDDNJraQG9qCtWwyvxcPADn4EV

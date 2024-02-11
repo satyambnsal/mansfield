@@ -1,13 +1,21 @@
 {
   "version": 1,
   "deployAliases": {
-    "mansfield": {
+    "counterapp": {
       "url": "https://proxy.berkeley.minaexplorer.com/graphql",
-      "keyPath": "keys/mansfield.json",
+      "keyPath": "keys/counterapp.json",
+      "feepayerKeyPath": "/Users/satyam/.cache/zkapp-cli/keys/auroaccount2.json",
+      "feepayerAlias": "auroaccount2",
+      "fee": "0.1",
+      "smartContract": "Counter"
+    },
+    "app2": {
+      "url": "https://proxy.berkeley.minaexplorer.com/graphql",
+      "keyPath": "keys/app2.json",
       "feepayerKeyPath": "/Users/satyam/.cache/zkapp-cli/keys/minaauroaccount1.json",
       "feepayerAlias": "minaauroaccount1",
       "fee": "0.1",
-      "smartContract": "Add"
+      "smartContract": "Counter"
     }
   }
 }

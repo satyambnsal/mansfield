@@ -1,3 +1,3 @@
 import { Add } from './Add';
-
-export { Add };
+import { Counter } from './Counter';
+export { Add, Counter };
