@@ -1,7 +1,7 @@
 /**
- * This script can be used to interact with the Add contract, after deploying it.
+ * This script can be used to interact with the Counter contract, after deploying it.
  *
- * We call the update() method on the contract, create a proof and send it to the chain.
+ * We call the increase_counter() method on the contract, create a proof and send it to the chain.
  * The endpoint that we interact with is read from your config.json.
  *
  * This simulates a user interacting with the zkApp from a browser, except that here, sending the transaction happens
@@ -14,7 +14,7 @@
  */
 import fs from 'fs/promises';
 import { Mina, PrivateKey } from 'o1js';
-import { Add } from './Add.js';
+import { Counter } from './Counter.js';
 
 // check command line arg
 let deployAlias = process.argv[2];
@@ -58,18 +58,19 @@ const fee = Number(config.fee) * 1e9; // in nanomina (1 billion = 1.0 mina)
 Mina.setActiveInstance(Network);
 let feepayerAddress = feepayerKey.toPublicKey();
 let zkAppAddress = zkAppKey.toPublicKey();
-let zkApp = new Add(zkAppAddress);
+let zkApp = new Counter(zkAppAddress);
 
 let sentTx;
 // compile the contract to create prover keys
 console.log('compile the contract...');
-await Add.compile();
+await Counter.compile();
 try {
-  // call update() and send transaction
+  // call increase_counter() and send transaction
   console.log('build transaction and create proof...');
   let tx = await Mina.transaction({ sender: feepayerAddress, fee }, () => {
-    zkApp.update();
+    zkApp.increase_counter();
   });
+  console.log('tx', tx);
   await tx.prove();
   console.log('send transaction...');
   sentTx = await tx.sign([feepayerKey]).send();

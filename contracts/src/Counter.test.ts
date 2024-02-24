@@ -39,7 +39,7 @@ describe('Counter', () => {
 
   it('should correctly increase the counter', async () => {
     await localDeploy();
-    const value = counterApp.value1.get();
+    const value = counterApp.value3.get();
     expect(value).toEqual(Field(0));
 
     const txn = await Mina.transaction(senderAccount, () => {
@@ -47,7 +47,29 @@ describe('Counter', () => {
     });
     await txn.prove();
     await txn.sign([senderKey]).send();
-    const updated_value = counterApp.value1.get();
+    const updated_value = counterApp.value3.get();
     expect(updated_value).toEqual(Field(1));
+  });
+
+  it('should correctly decrease the counter', async () => {
+    await localDeploy();
+    const value = counterApp.value3.get();
+    expect(value).toEqual(Field(0));
+
+    const txn = await Mina.transaction(senderAccount, () => {
+      counterApp.increase_counter();
+    });
+    await txn.prove();
+    await txn.sign([senderKey]).send();
+    const updated_value = counterApp.value3.get();
+    expect(updated_value).toEqual(Field(1));
+
+    const txn1 = await Mina.transaction(senderAccount, () => {
+      counterApp.decrease_counter();
+    });
+    await txn1.prove();
+    await txn1.sign([senderKey]).send();
+    const updated_value3 = counterApp.value3.get();
+    expect(updated_value3).toEqual(Field(0));
   });
 });

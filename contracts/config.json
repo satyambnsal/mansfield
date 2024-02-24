@@ -1,20 +1,12 @@
 {
   "version": 1,
   "deployAliases": {
-    "counterapp": {
+    "counter_satyam": {
       "url": "https://proxy.berkeley.minaexplorer.com/graphql",
-      "keyPath": "keys/counterapp.json",
+      "keyPath": "keys/counter_satyam.json",
       "feepayerKeyPath": "/Users/satyam/.cache/zkapp-cli/keys/auroaccount2.json",
       "feepayerAlias": "auroaccount2",
-      "fee": "0.1",
-      "smartContract": "Counter"
-    },
-    "app2": {
-      "url": "https://proxy.berkeley.minaexplorer.com/graphql",
-      "keyPath": "keys/app2.json",
-      "feepayerKeyPath": "/Users/satyam/.cache/zkapp-cli/keys/minaauroaccount1.json",
-      "feepayerAlias": "minaauroaccount1",
-      "fee": "0.1",
+      "fee": "1",
       "smartContract": "Counter"
     }
   }

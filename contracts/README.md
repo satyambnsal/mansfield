@@ -28,6 +28,18 @@ npm run coverage
 
 
 
+## zk lightnet endpoints
+
+GraphQL endpoint: http://192.168.29.168:8080/graphql
+Accounts Manager endpoint: http://192.168.29.168:8181
+Archive Node API endpoint: http://192.168.29.168:8282
+PostgreSQL connection string: postgresql://postgres:postgres@localhost:5432/archive
+
+
+
+
+
+
 # Details
 
 GraphQL API Berkeley:
