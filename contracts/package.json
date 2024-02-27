@@ -36,11 +36,9 @@
     "ts-jest": "^27.0.7",
     "typescript": "latest"
   },
-  "peerDependencies": {
-    "o1js": "^0.16.0"
-  },
   "dependencies": {
-    "o1js": "^0.16.2",
-    "zkapp-cli": "^0.17.2"
+    "o1js": "^0.16.0",
+    "zkapp-cli": "^0.17.2",
+    "@aurowallet/mina-provider": "1.0.1"
   }
 }
